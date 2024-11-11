@@ -1,6 +1,7 @@
 ## Content
 - [LAB1 (Matric multiplication)](#LAB1)
 - [LAB2 (Words finder)](#LAB2)
+- [LAB3 (Students sorter and finder)](#LAB3)
   
 
 ## LAB1 
@@ -116,4 +117,58 @@ The cat is at a house. The dog is on a street. I love my house.
 Words that don`t repeat in sentences: [cat, at]
 Do you want to run the program again? (y/n)
 n
+```
+
+## LAB3
+### Theme
+Students sorter and finder
+
+### Running the Program
+1. Clone or Download the program file Main.java.
+
+2. Open Terminal or Command Prompt and navigate to the directory where Main.java is located.
+
+3. Compile the Program by running:
+```sh
+javac Main.java Student.java
+```
+
+5. Run the Program by executing:
+```sh
+java Main
+```
+
+### Usage
+1. Define Sorting Fields and Order
+   
+The program prompts you to choose and enter fields for sorting.
+
+2. Output
+   
+The program will display the sorted list of students based on the chosen fields.
+
+3. Search for a student
+   
+The program will then look for a specific student and output whether the student was found.
+
+5. Repeat:
+   
+After completion, choose whether to run the program again by entering y (yes) or n (no).
+
+### Example Usage
+```typescript
+Choose primary sorting field (firstname, lastname, age, gender, course): 
+course
+Choose secondary sorting field (firstname, lastname, age, gender, course): 
+age
+Sorted students by course and age:
+Student:	name=Charlie, lastname=Di, age=19, gender=Female, course=2
+Student:	name=Alice, lastname=Maclaren, age=18, gender=Female, course=2
+Student:	name=Edward, lastname=Hoggins, age=17, gender=Male, course=2
+Student:	name=Bob, lastname=Cawasaki, age=20, gender=Male, course=3
+Student:	name=Diana, lastname=Supre, age=22, gender=Female, course=4
+
+Searching for Student:	name=Alice, lastname=Maclaren, age=18, gender=Female, course=2
+Found: Yes
+Do you want to run the program again? (y/n)
 ```
