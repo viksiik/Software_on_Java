@@ -20,27 +20,60 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        boolean choice;
+        do {
+            // Create the array of students
+            Student[] students = {
+                    new Student("Alice", "Maclaren", 18, "Female", 2),
+                    new Student("Bob", "Cawasaki", 20, "Male", 3),
+                    new Student("Charlie", "Di", 19, "Female", 2),
+                    new Student("Edward", "Hoggins", 17, "Male", 2),
+                    new Student("Diana", "Supre", 22, "Female", 4)
+            };
 
-        // Create the array of students
-        Student[] students = {
-                new Student("Alice", "Maclaren", 18, "Female", 2),
-                new Student("Bob", "Cawasaki", 20, "Male", 3),
-                new Student("Charlie", "Di", 19, "Female", 2),
-                new Student("Edward", "Hoggins", 17, "Male", 2),
-                new Student("Diana", "Supre", 22, "Female", 4)
-        };
+            // Sort the array of students
+            sortStudents(students);
 
-        // Sort the array of students
-        sortStudents(students);
+            // Define the target student to search for
+            Student targetStudent = new Student("Alice", "Maclaren", 18, "Female", 2);
 
-        // Define the target student to search for
-        Student targetStudent = new Student("Alice", "Maclaren", 18, "Female", 2);
+            boolean found = Arrays.asList(students).contains(targetStudent);
 
-        boolean found = Arrays.asList(students).contains(targetStudent);
+            // Output the search results
+            System.out.println("\nSearching for " + targetStudent);
+            System.out.println("Found: " + (found ? "Yes" : "No"));
 
-        // Output the search results
-        System.out.println("\nSearching for " + targetStudent);
-        System.out.println("Found: " + (found ? "Yes" : "No"));
+            choice = doChoice();
+        } while (choice);
+    }
+
+    /**
+     * Prompts the user to decide whether to run the program again.
+     * Accepts user input as 'y' for yes and 'n' for no.
+     *
+     * @return boolean - Returns true if the user wants to run the program again (input is 'y'),
+     *                   or false if the user wants to exit (input is 'n').
+     */
+    private static boolean doChoice() {
+        char choice;
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Do you want to run the program again? (y/n)");
+        while (true) {
+            try {
+                choice = scanner.next().toLowerCase().charAt(0);
+                if (choice == 'y') {
+                    return true;
+                } else if (choice == 'n') {
+                    return false;
+                } else {
+                    System.out.println("Invalid choice. Please enter 'y' or 'n'.");
+                }
+            } catch (Exception e) {
+                System.out.println("Error: Invalid input. Please try again.");
+                scanner.next();
+            }
+        }
     }
 
     /**
