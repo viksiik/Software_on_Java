@@ -31,26 +31,53 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        boolean choice;
 
         try {
-            char[][] A = inputMatrix("A");
-            System.out.println("Your matrix A:");
-            printMatrix(A);
+            do {
+                char[][] A = inputMatrix("A");
+                System.out.println("Your matrix A:");
+                printMatrix(A);
 
-            char[][] B = inputMatrix("B");
-            System.out.println("Your matrix B:");
-            printMatrix(B);
+                char[][] B = inputMatrix("B");
+                System.out.println("Your matrix B:");
+                printMatrix(B);
 
-            char[][] C = multiplyMatrices(A, B);
-            System.out.println("Multiplication matrix C:");
-            printMatrix(C);
+                char[][] C = multiplyMatrices(A, B);
+                System.out.println("Multiplication matrix C:");
+                printMatrix(C);
 
-            double[] rowAverages = calculateRowAverages(C);
-            System.out.println("Average value (in ASCII) of elements for each row:");
-            System.out.println(Arrays.toString(rowAverages));
+                double[] rowAverages = calculateRowAverages(C);
+                System.out.println("Average value (in ASCII) of elements for each row:");
+                System.out.println(Arrays.toString(rowAverages));
 
-        } catch (Exception e) {
+                choice = doChoice();
+            } while (choice);
+        } catch(Exception e){
             System.err.println("Error: " + e.getMessage());
+        }
+
+    }
+
+    private static boolean doChoice() {
+        char choice;
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Do you want to run the program again? (y/n)");
+        while (true) {
+            try {
+                choice = scanner.next().toLowerCase().charAt(0);
+                if (choice == 'y') {
+                    return true;
+                } else if (choice == 'n') {
+                    return false;
+                } else {
+                    System.out.println("Invalid choice. Please enter 'y' or 'n'.");
+                }
+            } catch (Exception e) {
+                System.out.println("Error: Invalid input. Please try again.");
+                scanner.next();
+            }
         }
     }
 
@@ -82,10 +109,10 @@ public class Main {
                 if (number > 0) {
                     break;
                 } else {
-                    System.out.println("Error: the value must be positive.");
+                    System.out.println("Error: the value must be positive. Please try again.");
                 }
             } catch (InputMismatchException e) {
-                System.out.println("Error: the value must be integer.");
+                System.out.println("Error: the value must be integer. Please try again.");
                 scanner.next();
             }
         }
@@ -100,7 +127,7 @@ public class Main {
 
         if (colsA != rowsB) {
             throw new IllegalArgumentException("Number of columns matrix B is not " +
-                    "equal to number of rows matrix A!");
+                    "equal to number of rows matrix A! Please try again.");
         }
 
         char[][] C = new char[rowsA][colsB];
