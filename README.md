@@ -1,7 +1,8 @@
 ## Content
-- [LAB1 (Matric multiplication)](#LAB1)
+- [LAB1 (Matrix multiplication)](#LAB1)
 - [LAB2 (Words finder)](#LAB2)
 - [LAB3 (Students sorter and finder)](#LAB3)
+- [LAB4 (Modified words finder](#LAB4)
   
 
 ## LAB1 
@@ -124,7 +125,7 @@ n
 Students sorter and finder
 
 ### Running the Program
-1. Clone or Download the program file Main.java.
+1. Clone or Download the program files.
 
 2. Open Terminal or Command Prompt and navigate to the directory where Main.java is located.
 
@@ -171,4 +172,50 @@ Student:	name=Diana, lastname=Supre, age=22, gender=Female, course=4
 Searching for Student:	name=Alice, lastname=Maclaren, age=18, gender=Female, course=2
 Found: Yes
 Do you want to run the program again? (y/n)
+n
+```
+
+## LAB4
+### Theme
+Modified unique Words Finder
+
+### Running the Program
+1. Clone or Download the program files.
+
+2. Open Terminal or Command Prompt and navigate to the directory where Main.java is located.
+
+3. Compile the Program by running:
+```sh
+javac Main.java Letter.java Word.java Punctuation.java Sentence.java Text.java
+```
+
+5. Run the Program by executing:
+```sh
+java Main
+```
+
+### Usage
+1. Input Text:
+
+The program prompts you to enter a text with at least one sentence. Separate sentences by periods (".").
+Example input:
+```sh
+The cat is at a house. The dog is on a street. I love my house.
+```
+
+2. Output:
+
+The program will display unique words from the first sentence that do not appear in subsequent sentences.
+
+3. Repeat:
+
+After completion, choose whether to run the program again by entering y (yes) or n (no).
+
+### Example Usage
+```typescript
+Enter text (minimum 1 sentence):
+The cat is at a house. The dog is on a street. I love my house.
+Words that don`t repeat in sentences: [cat, at]
+Do you want to run the program again? (y/n)
+n
 ```
