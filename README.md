@@ -2,7 +2,8 @@
 - [LAB1 (Matrix multiplication)](#LAB1)
 - [LAB2 (Words finder)](#LAB2)
 - [LAB3 (Students sorter and finder)](#LAB3)
-- [LAB4 (Modified words finder](#LAB4)
+- [LAB4 (Modified words finder)](#LAB4)
+- [LAB5(Knight`s equipment set manager)](#LAB5)
   
 
 ## LAB1 
@@ -19,7 +20,7 @@ Matrix Multiplication and Row Average Calculation
 javac Main.java
 ```
 
-5. Run the Program by executing:
+4. Run the Program by executing:
 ```sh
 java Main
 ```
@@ -89,7 +90,7 @@ Unique Words Finder
 javac Main.java
 ```
 
-5. Run the Program by executing:
+4. Run the Program by executing:
 ```sh
 java Main
 ```
@@ -134,7 +135,7 @@ Students sorter and finder
 javac Main.java Student.java
 ```
 
-5. Run the Program by executing:
+4. Run the Program by executing:
 ```sh
 java Main
 ```
@@ -152,7 +153,7 @@ The program will display the sorted list of students based on the chosen fields.
    
 The program will then look for a specific student and output whether the student was found.
 
-5. Repeat:
+4. Repeat:
    
 After completion, choose whether to run the program again by entering y (yes) or n (no).
 
@@ -189,7 +190,7 @@ Modified unique Words Finder
 javac Main.java Letter.java Word.java Punctuation.java Sentence.java Text.java
 ```
 
-5. Run the Program by executing:
+4. Run the Program by executing:
 ```sh
 java Main
 ```
@@ -218,4 +219,54 @@ The cat is at a house. The dog is on a street. I love my house.
 Words that don`t repeat in sentences: [cat, at]
 Do you want to run the program again? (y/n)
 n
+```
+
+## LAB5
+### Theme
+Knight`s equipment set manager
+
+### Running the Program
+1. Clone or Download the program files.
+
+2. Open Terminal or Command Prompt and navigate to the directory where Main.java is located.
+
+3. Compile the Program by running:
+```sh
+javac Main.java Armor.java Sword.java Helmet.java Shield.java KnightEquipmentSet.java Equipment.java
+```
+
+4. Run the Program by executing:
+```sh
+java Main
+```
+
+### Usage
+1. Run a Main class
+
+2. Output
+   
+The program will display information about the knight's equipment, the total cost of the set,
+<br>sorted equipment by weight and equipment items in a specified price range.
+
+
+### Example Usage
+```typescript
+Knight's Equipment Set:
+Helmet: Knight's Helmet, Price: 120.0, Weight: 1.5
+Armor: Knight's Armor, Price: 250.0, Weight: 10.0
+Shield: Steel Shield, Price: 150.0, Weight: 5.0
+Sword: Excalibur, Price: 1000.0, Weight: 8.0
+
+Total cost of the set: 1520.0
+
+Sorted set by weight:
+Helmet: Knight's Helmet, Price: 120.0, Weight: 1.5
+Shield: Steel Shield, Price: 150.0, Weight: 5.0
+Sword: Excalibur, Price: 1000.0, Weight: 8.0
+Armor: Knight's Armor, Price: 250.0, Weight: 10.0
+
+Items in price range 100 to 250:
+Helmet: Knight's Helmet, Price: 120.0, Weight: 1.5
+Shield: Steel Shield, Price: 150.0, Weight: 5.0
+Armor: Knight's Armor, Price: 250.0, Weight: 10.0
 ```
