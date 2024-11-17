@@ -4,6 +4,7 @@
 - [LAB3 (Students sorter and finder)](#LAB3)
 - [LAB4 (Modified words finder)](#LAB4)
 - [LAB5(Knight`s equipment set manager)](#LAB5)
+- [LAB6(Modified knight`s equipment set manager)](#LAB6)
   
 
 ## LAB1 
@@ -269,4 +270,48 @@ Items in price range 100 to 250:
 Helmet: Knight's Helmet, Price: 120.0, Weight: 1.5
 Shield: Steel Shield, Price: 150.0, Weight: 5.0
 Armor: Knight's Armor, Price: 250.0, Weight: 10.0
+```
+
+## LAB6
+### Theme
+Modofied knight`s equipment set manager
+
+### Running the Program
+1. Clone or Download the program files.
+
+2. Open Terminal or Command Prompt and navigate to the directory where Main.java is located.
+
+3. Compile the Program by running:
+```sh
+javac Main.java Armor.java Sword.java Helmet.java Shield.java EquipmentSet.java Equipment.java Node.java
+```
+
+4. Run the Program by executing:
+```sh
+java Main
+```
+
+### Usage
+1. Run a Main class
+
+2. Output
+   
+The program will display information about the knight's equipment.
+
+
+### Example Usage
+```typescript
+Equipment set:
+Sword: Excalibur, Price: 1000.0, Weight: 8.0
+Armor: Knight's Armor, Price: 250.0, Weight: 10.0
+Helmet: Knight's Helmet, Price: 120.0, Weight: 1.5
+Shield: Knight's Shield, Price: 200.0, Weight: 2.0
+
+After removal:
+Sword: Excalibur, Price: 1000.0, Weight: 8.0
+Helmet: Knight's Helmet, Price: 120.0, Weight: 1.5
+Armor: Knight's Armor, Price: 250.0, Weight: 10.0
+
+After all removal:
+
 ```
